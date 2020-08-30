@@ -100,11 +100,11 @@ while len(graph) < len(room_graph):
             graph[new_room_id][opposite_path[available_room]] = cur_room_id
             cur_room_id = new_room_id
 
-    vert_traversal = bfs_map(graph, player.current_room.id)
+    room_traversal = bfs_map(graph, player.current_room.id)
     
-    if vert_traversal is not None:
+    if room_traversal is not None:
         
-        for r in vert_traversal:
+        for r in room_traversal:
             
             for room_exits in graph[cur_room_id]:
                 
